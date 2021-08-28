@@ -1,4 +1,7 @@
+# Minikube
 
+- Install minikube
+- Enable ingress: minikube plugins enable ingress
 # Install Argo
 
 ```

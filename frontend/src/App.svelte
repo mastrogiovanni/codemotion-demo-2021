@@ -2,8 +2,11 @@
 	export let name;
 
 	async function click() {
-		console.log("click")
+		let response = await fetch("/api")
+		message = await response.text();
 	}
+
+	let message;
 
 </script>
 
@@ -12,6 +15,11 @@
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
 
 	<button on:click={click} class="btn btn-lg btn-primary">Stress Test</button>
+
+	{#if message}
+		{message}
+	{/if}
+
 </main>
 
 <style>
