@@ -4,7 +4,7 @@ metadata:
   name: guestbook
   namespace: monitoring
 spec:
-  # serviceAccountName: prometheus
+  serviceAccountName: prometheus
   serviceMonitorSelector:
     matchLabels:
       team: frontend
