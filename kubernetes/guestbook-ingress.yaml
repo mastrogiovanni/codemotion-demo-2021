@@ -10,17 +10,17 @@ spec:
     - host: guestbook.info
       http:
         paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: guestbook-ui
-                port:
-                  number: 5000
-          - path: /api
+          - path: /api(.*)
             pathType: Prefix
             backend:
               service:
                 name: guestbook-backend
                 port:
                   number: 3000
+          - path: /(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: guestbook-ui
+                port:
+                  number: 5000
