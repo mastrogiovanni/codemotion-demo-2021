@@ -1,7 +1,8 @@
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: guestbook
+  name: guestbook-ui
+  namespace: monitoring
   labels:
     team: frontend
 spec:
