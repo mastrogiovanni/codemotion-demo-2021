@@ -40,3 +40,25 @@ kubectl --namespace monitoring port-forward svc/alertmanager-main 9093
 # Aplication
 
 Application is at: git@github.com:mastrogiovanni/codemotion-meetup-06-02-2020.git directory kubernetes
+
+# Access to Application
+
+Exlore the ingress host via:
+
+kubectl get ingress -n guestbook
+
+You should see something like 
+
+```
+NAME                CLASS    HOSTS            ADDRESS        PORTS   AGE
+guestbook-ingress   <none>   guestbook.info   192.168.67.2   80      10m
+```
+
+You need to add to your /etc/hosts a line
+
+```
+192.168.67.2    guestbook.info
+```
+
+After that you will reach application at guestbook.info and API at guestbook.info/api
+
