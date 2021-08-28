@@ -1,13 +1,13 @@
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: guestbook-ui
+  name: guestbook-backend
   namespace: monitoring
   labels:
-    team: frontend
+    team: backend
 spec:
   selector:
     matchLabels:
-      app: guestbook-ui
+      app: guestbook-backend
   endpoints:
   - port: web

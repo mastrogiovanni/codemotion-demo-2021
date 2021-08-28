@@ -7,7 +7,7 @@ spec:
   serviceAccountName: prometheus-k8s
   serviceMonitorSelector:
     matchLabels:
-      team: frontend
+      team: backend
   resources:
     requests:
       memory: 400Mi
