@@ -9,6 +9,13 @@ spec:
     - host: guestbook.info
       http:
         paths:
+          - path: /metrics
+            pathType: Prefix
+            backend:
+              service:
+                name: guestbook-backend
+                port:
+                  number: 3000
           - path: /api(.*)
             pathType: Prefix
             backend:
