@@ -17,4 +17,5 @@ spec:
       - image: mastrogiovanni/codemotion-guestbook-backend:0.0.1
         name: guestbook-backend
         ports:
-        - containerPort: 3000
+        - name: web
+          containerPort: 3000
