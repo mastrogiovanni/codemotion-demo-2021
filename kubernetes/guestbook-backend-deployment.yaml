@@ -14,7 +14,7 @@ spec:
         app: guestbook-backend
     spec:
       containers:
-      - image: mastrogiovanni/codemotion-guestbook-backend:0.0.3
+      - image: mastrogiovanni/codemotion-guestbook-backend:0.0.4
         name: guestbook-backend
         ports:
         - name: web
