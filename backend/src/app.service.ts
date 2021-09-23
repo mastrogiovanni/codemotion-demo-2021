@@ -14,11 +14,14 @@ export class AppService {
       ['method', 'route', 'code'],
       [0.1, 0.3, 0.5, 0.7, 1, 3, 5, 7, 10]
     )
+
+    console.log("Metrics registered");
+
   }
 
   getHello(): string {
-    const end = this.httpRequestDurationMicroseconds.startTimer()
-    end({ route: '/hello', code: 200, method: '/hello' })
+    const end = this.httpRequestDurationMicroseconds.startTimer();
+    end({ route: '/hello', code: 200, method: '/hello' });
     return 'Hello World!';
   }
 }
