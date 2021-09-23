@@ -19,6 +19,7 @@ import { detach } from "svelte/internal";
 		count = count + 1;
 		stop = Date.now();
 		frequency = count / (stop - start) * 1000;
+		setTimeout(tick);
 	}
 
 	async function click() {
