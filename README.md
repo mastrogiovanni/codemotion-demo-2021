@@ -90,7 +90,7 @@ You can monitor your application using as filter the following:
 service="guestbook-backend"
 ```
 
-A metrics is for example:
+A metrics is for example a Timeline with the following:
 
-{__name__="http_request_duration_seconds_sum",service="guestbook-backend"}
+`avg(rate(http_request_duration_seconds_sum{service="guestbook-backend"}[1m]))`
 
