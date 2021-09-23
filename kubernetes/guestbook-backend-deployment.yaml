@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: guestbook-backend
 spec:
-  replicas: 1
+  replicas: 4
   revisionHistoryLimit: 3
   selector:
     matchLabels:
@@ -14,7 +14,7 @@ spec:
         app: guestbook-backend
     spec:
       containers:
-      - image: mastrogiovanni/codemotion-guestbook-backend:0.0.4
+      - image: mastrogiovanni/codemotion-guestbook-backend:0.0.5
         name: guestbook-backend
         ports:
         - name: web

@@ -18,7 +18,7 @@ export class AppService {
 
   async getHello(): Promise<string> {
     const end = this.httpRequestDurationMicroseconds.startTimer();
-    await new Promise(resolve => setTimeout(resolve, Math.random() * 1000));
+    // await new Promise(resolve => setTimeout(resolve, Math.random() * 1000));
     end({ route: '/hello', code: 200, method: '/hello' });
     return 'Hello World!';
   }
