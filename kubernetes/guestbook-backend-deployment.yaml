@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: guestbook-backend
 spec:
-  replicas: 4
+  replicas: 12
   revisionHistoryLimit: 3
   selector:
     matchLabels:
