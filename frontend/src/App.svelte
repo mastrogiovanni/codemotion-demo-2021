@@ -10,7 +10,7 @@ import { detach } from "svelte/internal";
 	let frequency;
 
 	async function stressAPI() {
-		let response = await fetch("/api")
+		let response = await fetch("/api/hello")
 		message = await response.text();
 	}
 
