@@ -56,13 +56,13 @@ kubectl --namespace monitoring port-forward svc/alertmanager-main 9093
 
 # Deploy Aplication
 
-Application is at: `git@github.com:mastrogiovanni/codemotion-meetup-06-02-2020.git` directory *kubernetes*: you need to create it in Argo.
+In Argo, create an application named guestbook using GIT URL `https://github.com/mastrogiovanni/codemotion-demo-2021.git` directory *kubernetes* and namespace *monitoring*.
 
 ## Access to Application
 
 Exlore the ingress host via:
 
-`kubectl get ingress -n guestbook`
+`kubectl get ingress -n monitoring`
 
 You should see something like 
 
