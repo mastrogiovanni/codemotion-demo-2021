@@ -92,5 +92,10 @@ service="guestbook-backend"
 
 A metrics is for example a Timeline with the following:
 
-`avg(rate(http_request_duration_seconds_sum{service="guestbook-backend"}[1m]))`
+`avg(rate(http_request_duration_seconds_sum{service="guestbook-backend"}[1m])) * 1000`
 
+# Local development
+
+Expose main ingress on local port 8888 of host machine
+
+`kubectl --namespace ingress-nginx port-forward svc/ingress-nginx-controller 8888:80`
